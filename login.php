@@ -69,12 +69,8 @@
 
 <?php
 if(isset($_POST['login'])) {
-<<<<<<< HEAD
-    $conn = new mysqli("localhost", "root", "", "yourgroupnumber_shareride_db");
-=======
     $conn = new mysqli("localhost", "root", "", "24rp15460-health");
->>>>>>> add-login-branch
-
+    $conn = new mysqli("localhost", "root", "", "24rp15460-health");
     $stmt = $conn->prepare("SELECT user_password FROM tbl_users WHERE user_email = ?");
     $stmt->bind_param("s", $_POST['email']);
     $stmt->execute();
@@ -82,11 +78,8 @@ if(isset($_POST['login'])) {
     $stmt->fetch();
 
     if(password_verify($_POST['password'], $hashed_password)) {
-<<<<<<< HEAD
-        echo "<script>alert('Login Successful!'); window.location.href='home.php';</script>";
-=======
         echo "<script>alert('Login Successful!'); window.location.href='index.php';</script>";
->>>>>>> add-login-branch
+        echo "<script>alert('Login Successful!'); window.location.href='index.php';</script>";
     } else {
         echo "<script>alert('Invalid Credentials!');</script>";
     }

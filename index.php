@@ -1,6 +1,6 @@
 <?php
-  // Display navigation links
-  echo "<a href='register.php'>Register</a> | <a href='login.php'>Login</a>";
+// Start session if needed
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -8,55 +8,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Welcome</title>
     <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
         body {
             background: url('background.jpg') no-repeat center center fixed;
             background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
 
-        .card {
+        /* Main Container */
+        .container {
+            text-align: center;
             background: rgba(255, 255, 255, 0.9);
+            padding: 40px;
             border-radius: 10px;
-            padding: 20px;
-            width: 300px;
-            margin: 100px auto;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .container h1 {
+            color: #6a0dad;
+            margin-bottom: 20px;
+        }
+
+        /* Button Styles */
+        .btn {
+            display: inline-block;
+            width: 150px;
+            padding: 12px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            cursor: pointer;
+            transition: background 0.3s;
+            text-decoration: none;
             text-align: center;
         }
 
-        .btn-purple {
+        .btn-login {
             background-color: #6a0dad;
-            color: #fff;
-            font-weight: bold;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
         }
 
-        .btn-purple:hover {
+        .btn-login:hover {
             background-color: #5c0dad;
         }
 
-        .text-purple {
-            color: #6a0dad;
+        .btn-register {
+            background-color: #ff6600;
         }
 
-        .text-purple:hover {
-            color: #5c0dad;
+        .btn-register:hover {
+            background-color: #cc5500;
         }
     </style>
 </head>
 <body>
 
-    <div class="card">
-        <h2 class="text-purple">Login</h2>
-        <form action="login_process.php" method="POST">
-            <input type="text" name="username" placeholder="Enter Username" required><br><br>
-            <input type="password" name="password" placeholder="Enter Password" required><br><br>
-            <button type="submit" class="btn-purple">Login</button>
-        </form>
+    <div class="container">
+        <h1>Welcome to Our Website</h1>
+        <a href="login.php" class="btn btn-login">Login</a>
+        <a href="register.php" class="btn btn-register">Register</a>
     </div>
 
 </body>
-</html>   
+</html>
