@@ -86,7 +86,11 @@
 
 <?php
 if(isset($_POST['register'])) {
+<<<<<<< HEAD
     $conn = new mysqli("localhost", "root", "", "yourgroupnumber_shareride_db");
+=======
+    $conn = new mysqli("localhost", "root", "", "24rp15460-health");
+>>>>>>> add-login-branch
 
     // Check for errors
     if ($conn->connect_error) {
@@ -108,3 +112,7 @@ if(isset($_POST['register'])) {
     $conn->close();
 }
 ?>
+<<<<<<< HEAD
+=======
+
+>>>>>>> add-login-branch
