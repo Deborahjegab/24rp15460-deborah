@@ -70,7 +70,6 @@
 <?php
 if(isset($_POST['login'])) {
     $conn = new mysqli("localhost", "root", "", "24rp15460-health");
-    $conn = new mysqli("localhost", "root", "", "24rp15460-health");
     $stmt = $conn->prepare("SELECT user_password FROM tbl_users WHERE user_email = ?");
     $stmt->bind_param("s", $_POST['email']);
     $stmt->execute();
