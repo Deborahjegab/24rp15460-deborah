@@ -1,4 +1,5 @@
 <?php
+  // Display navigation links
   echo "<a href='register.php'>Register</a> | <a href='login.php'>Login</a>";
 ?>
 
@@ -7,102 +8,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-<style>
-    body {
-    background: url('background.jpg') no-repeat center center fixed;
-    background-size: cover;
-}
+    <title>Login Page</title>
+    <style>
+        body {
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
 
-.card {
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
-}
+        .card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            margin: 100px auto;
+            text-align: center;
+        }
 
-.btn-purple {
-    background-color: #6a0dad;
-    color: #fff;
-    font-weight: bold;
-}
+        .btn-purple {
+            background-color: #6a0dad;
+            color: #fff;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
 
-.btn-purple:hover {
-    background-color: #5c0dad;
-}
+        .btn-purple:hover {
+            background-color: #5c0dad;
+        }
 
-.text-purple {
-    color: #6a0dad;
-}
+        .text-purple {
+            color: #6a0dad;
+        }
 
-.text-purple:hover {
-    color: #5c0dad;
-}
-
-</style>
+        .text-purple:hover {
+            color: #5c0dad;
+        }
+    </style>
 </head>
 <body>
-    
+
+    <div class="card">
+        <h2 class="text-purple">Login</h2>
+        <form action="login_process.php" method="POST">
+            <input type="text" name="username" placeholder="Enter Username" required><br><br>
+            <input type="password" name="password" placeholder="Enter Password" required><br><br>
+            <button type="submit" class="btn-purple">Login</button>
+        </form>
+    </div>
+
 </body>
 </html>
-=======
-  echo "
-  <html>
-    <head>
-      <title>User Registration & Login</title>
-      <style>
-        /* Center the content on the page */
-        body {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          height: 100vh;
-          margin: 0;
-          font-family: Arial, sans-serif;
-          background-color: #f4f4f9;
-        }
-
-        /* Container for links */
-        .links-container {
-          text-align: center;
-        }
-
-        /* Title styles */
-        h1 {
-          color: #333;
-          font-size: 24px;
-          margin-bottom: 20px;
-        }
-
-        /* Styles for links */
-        a {
-          color: #007BFF; /* Blue color */
-          text-decoration: none; /* Remove underline */
-          padding: 10px 20px;
-          font-weight: bold;
-          margin: 0 10px;
-          border: 2px solid #007BFF;
-          border-radius: 5px;
-          transition: all 0.3s ease;
-        }
-
-        a:hover {
-          color: white;
-          background-color: #0056b3;
-          text-decoration: none; /* No underline on hover */
-        }
-
-        /* Styling for the separator */
-        .separator {
-          margin: 0 15px;
-          color: #333;
-        }
-      </style>
-    </head>
-    <body>
-      <div class='links-container'>
-        <h1>Welcome to User Registration & Login</h1>
-        <a href='register.php'>Register</a><span class='separator'>|</span><a href='login.php'>Login</a>
-      </div>
-    </body>
-  </html>
-
-
