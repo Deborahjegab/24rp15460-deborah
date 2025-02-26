@@ -1,6 +1,5 @@
 <?php
 // Start session if needed
-session_start();
 ?>
 
 <!DOCTYPE html>
