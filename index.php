@@ -103,6 +103,6 @@
         <a href='register.php'>Register</a><span class='separator'>|</span><a href='login.php'>Login</a>
       </div>
     </body>
-  </html>";
-?>
+  </html>
+
 
